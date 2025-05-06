@@ -26,22 +26,17 @@ export default [
         extraFileExtensions: ['.astro'],
       },
     },
-  },
-  {
-    files: ['**/*.{js,jsx,astro}'],
     rules: {
-      'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
+      'no-unused-vars': 'off',
+      '@typescript-eslint/no-unused-vars': 'off',
     },
   },
   {
-    // Define the configuration for `<script>` tag.
-    // Script in `<script>` is assigned a virtual file name with the `.js` extension.
-    files: ['**/*.{ts,tsx}', '**/*.astro/*.js'],
+    files: ['**/*.{ts,tsx}'],
     languageOptions: {
       parser: typescriptParser,
     },
     rules: {
-      // Note: you must disable the base rule as it can report incorrect errors
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': [
         'error',
@@ -51,6 +46,12 @@ export default [
         },
       ],
       '@typescript-eslint/no-non-null-assertion': 'off',
+    },
+  },
+  {
+    files: ['**/*.{js,jsx,astro}'],
+    rules: {
+      'no-mixed-spaces-and-tabs': ['error', 'smart-tabs'],
     },
   },
   {
