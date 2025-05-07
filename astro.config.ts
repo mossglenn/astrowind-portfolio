@@ -81,7 +81,16 @@ export default defineConfig({
   vite: {
     resolve: {
       alias: {
-        '~': path.resolve(__dirname, './src'),
+        '~': path.resolve('./src'),
+        '@': path.resolve('./src'),
+        '@components': path.resolve('./src/components'),
+        '@layouts': path.resolve('./src/layouts'),
+        '@pages': path.resolve('./src/pages'),
+        '@public': path.resolve('./public'),
+        '@styles': path.resolve('./src/styles'),
+        '@utils': path.resolve('./src/utils'),
+        '@assets': path.resolve('./src/assets'),
+        '@project-images': path.resolve('./src/assets/images/project-images'),
       },
     },
 

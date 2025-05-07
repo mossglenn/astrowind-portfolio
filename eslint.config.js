@@ -30,6 +30,25 @@ export default [
       'no-unused-vars': 'off',
       '@typescript-eslint/no-unused-vars': 'off',
     },
+    settings: {
+      'import/resolver': {
+        alias: {
+          map: [
+            ['~', './src'],
+            ['@', './src'],
+            ['@components', './src/components'],
+            ['@layouts', './src/layouts'],
+            ['@pages', './src/pages'],
+            ['@public', './public'],
+            ['@styles', './src/styles'],
+            ['@utils', './src/utils'],
+            ['@assets', './src/assets'],
+            ['@project-images', './src/assets/images/project-images'],
+          ],
+          extensions: ['.js', '.jsx', '.ts', '.tsx', '.astro'],
+        },
+      },
+    },
   },
   {
     files: ['**/*.{ts,tsx}'],

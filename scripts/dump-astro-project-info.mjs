@@ -17,8 +17,8 @@
 import { execSync } from 'child_process';
 import { promises as fs } from 'fs';
 
-const OUT_FILE = '.reference-files/astro-project-dump.md';
-const ZIP_FILE = '.reference-files/astro-project-snapshot.zip';
+const OUT_FILE = '.project-summaries/astro-project-dump.md';
+const ZIP_FILE = '.project-summaries/astro-project-snapshot.zip';
 const SECTIONS = [];
 
 async function safeRead(file) {

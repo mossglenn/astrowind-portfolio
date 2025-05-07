@@ -11,5 +11,21 @@
   "yaml.schemas": {
     "./.vscode/astrowind/config-schema.json": "/src/config.yaml"
   },
-  "eslint.useFlatConfig": true
+  "eslint.useFlatConfig": true,
+  "typescript.preferences.importModuleSpecifier": "non-relative",
+  "typescript.preferences.importModuleSpecifierEnding": "js",
+  "typescript.tsdk": "node_modules/typescript/lib",
+  "path-intellisense.mappings": {
+    "~": "${workspaceFolder}/src",
+    "@": "${workspaceFolder}/src",
+    "@components": "${workspaceFolder}/src/components",
+    "@layouts": "${workspaceFolder}/src/layouts",
+    "@pages": "${workspaceFolder}/src/pages",
+    "@public": "${workspaceFolder}/public",
+    "@styles": "${workspaceFolder}/src/styles",
+    "@utils": "${workspaceFolder}/src/utils",
+    "@assets": "${workspaceFolder}/src/assets",
+    "@project-images": "${workspaceFolder}/src/assets/images/project-images"
+  },
+  "path-intellisense.extensionOnImport": true
 }
