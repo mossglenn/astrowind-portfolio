@@ -1,15 +1,17 @@
 .dark {
-  --aw-color-primary: rgb(1 97 239);
-  --aw-color-secondary: rgb(1 84 207);
-  --aw-color-accent: rgb(109 40 217);
+  --aw-color-primary: hsl(235, 83%, 58%);
+  --aw-color-secondary: hsl(235, 80%, 64%);
+  --aw-color-accent: hsl(157, 62%, 41%);
 
-  --aw-color-text-heading: rgb(247, 248, 248);
-  --aw-color-text-default: rgb(229 236 246);
-  --aw-color-text-muted: rgb(229 236 246 / 66%);
-  --aw-color-bg-page: rgb(3 6 32);
+  --aw-color-text-heading: hsl(210, 10%, 92%);
+  --aw-color-text-default: hsl(210, 11%, 85%);
+  --aw-color-text-muted: hsl(210, 12%, 65%);
+
+  --aw-color-bg-page: hsl(216, 12%, 18%);
+  --aw-color-bg-section: hsl(216, 20%, 10%);
 
   ::selection {
-    background-color: black;
-    color: snow;
+    background-color: var(--aw-color-primary);
+    color: hsl(0, 0%, 100%);
   }
 }

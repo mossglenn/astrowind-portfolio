@@ -1,0 +1,105 @@
+---
+import Tags from '~/components/blog/Tags.astro';
+import Button from '~/components/ui/Button.astro';
+import DListItem from '~/components/ui/DListItem.astro';
+import Timeline from '~/components/ui/Timeline.astro';
+import Content from '~/components/widgets/Content.astro';
+import Features from '~/components/widgets/Features.astro';
+import Header from '~/components/widgets/Header.astro';
+import Stats from '~/components/widgets/Stats.astro';
+import Image from '~/components/common/Image.astro';
+import Layout from '~/layouts/Layout.astro';
+import PageLayout from '~/layouts/PageLayout.astro';
+import Headline from '~/components/ui/Headline.astro';
+import AppStoreImage from '~/assets/images/app-store.png';
+import { App } from 'astro/app';
+---
+
+<PageLayout>
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 text-base shadow-md bg-secondary">
+    <a href="/portfolio" class="block p-2 text-primary hover:text-accent"
+      >← Back to Projects</a
+    >
+    <ul class="flex gap-4 p-2 text-sm">
+      <li><a href="#highlights" class="hover:text-accent">Highlights</a></li>
+      <li><a href="#narrative" class="hover:text-accent">Narrative</a></li>
+      <li><a href="#details" class="hover:text-accent">Details</a></li>
+    </ul>
+  </nav>
+
+  <!-- Headline -->
+  <Headline
+    title="Project Title"
+    subtitle="Short description of the project."
+    tagline="Learning Design | xAPI | Articulate Storyline"
+    classes={{
+      container: 'max-w-4xl mx-auto p-4 bg-secondary rounded-lg text-center',
+      title: 'text-4xl font-bold text-base',
+      subtitle: 'text-xl text-muted',
+    }}
+  />
+  <!-- Highlights -->
+  <section id="highlights" class="mt-8">
+    <h2 class="mb-4 text-xl font-semibold text-primary">Project Highlights</h2>
+    <Features
+      items={[
+        {
+          title: 'Highlight One',
+          description: 'Brief description of highlight.',
+        },
+        { title: 'Highlight Two', description: 'Another key point.' },
+      ]}
+    />
+    <Stats
+      stats={[
+        { amount: '15K+', title: 'Users Reached' },
+        { amount: '97%', title: 'Completion Rate' },
+      ]}
+    />
+  </section>
+
+  <!-- Narrative Description -->
+  <section id="narrative" class="mt-8">
+    <h2 class="mb-4 text-xl font-semibold">Narrative Description</h2>
+
+    <Content
+      title="Narrative Description"
+      content="<p>Begin with the <strong>challenge</strong> and context...</p><p>Next, describe the <strong>solution</strong>, process, and strategies applied...</p><p>Conclude with the <strong>outcomes</strong> and key takeaways...</p>"
+      image={{
+        src: AppStoreImage,
+        alt: 'Illustration or mockup',
+      }}
+      items={[
+        {
+          title: 'Project Kickoff',
+          description: 'January 2024',
+          icon: 'tabler:map-pin',
+        },
+        {
+          title: 'Prototype Completed',
+          description: 'March 2024',
+          icon: 'tabler:tools',
+        },
+        {
+          title: 'Launch & Evaluation',
+          description: 'July 2024',
+          icon: 'tabler:rocket',
+        },
+      ]}
+    />
+  </section>
+  <!-- Details Section -->
+  <section id="details" class="mt-8">
+    <h2 class="mb-4 text-xl font-semibold">Details</h2>
+    <dl>
+      <DListItem dt="Tech Stack">Astro, TailwindCSS, shadcn, Vercel</DListItem>
+
+      <DListItem dt="Role">Instructional Designer & Developer</DListItem
+      >Instructional Designer & Developer
+      <DListItem dt="Duration">4 months</DListItem>
+      <DListItem dt="Collaborators">UX Designer, Frontend Developer</DListItem>
+    </dl>
+    <Button href="https://project-link.com" text="View Live Project" />
+  </section>
+</PageLayout>
